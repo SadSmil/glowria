@@ -1,0 +1,403 @@
+{
+  "stats": {
+    "suites": 6,
+    "tests": 6,
+    "passes": 4,
+    "pending": 0,
+    "failures": 2,
+    "testsRegistered": 6,
+    "passPercent": 66.66666666666667,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2026-07-09T21:07:36.753Z",
+    "end": "2026-07-09T21:23:17.166Z",
+    "duration": 940413
+  },
+  "results": [
+    {
+      "uuid": "873e6d3f-4c3f-4be0-a72c-0d1797476623",
+      "title": "",
+      "fullFile": "cypress\\e2e\\parcours.cy.js",
+      "file": "cypress\\e2e\\parcours.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "27f47d6d-d688-4a28-8f3b-6b499ed66f55",
+          "title": "authentification",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "inscription",
+              "fullTitle": "authentification inscription",
+              "timedOut": null,
+              "duration": 192,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept('POST', '**/signup').as('signup');\ncy.get('.modal__form').click();\ncy.get('#newEmail').type(`${email}@gmail.com`);\ncy.contains('.btn.btn-black.margin__large.btn-size-large', 'Inscription').click();\ncy.url().should('include', '/signup');\ncy.get('#customer_firstName').type('Amal');\ncy.get('#customer_lastName').type('Amal');\ncy.get('#customer_emailConfirm').type(`${email}@gmail.com`);\ncy.get('#customer_password').type('Password123!');\ncy.get('#customer_birthday').type('05051995', {\n  force: true\n});\ncy.get('#legalmentions').click();\ncy.get('#submitBtn').click();\ncy.get('#menu-button-open').click();\ncy.contains('.nav-link', 'acheter').click();\ncy.get('.btn.btn-red.btn-size-small.text__semi-bold.color__white.btn-annual.add-to-cart ').click();\ncy.get('#user_input_autocomplete_address').type('10 Rue de Rivoli, Paris');\ncy.contains('Paris').should('be.visible').click();\ncy.get('#subscription_deliveryContact_phoneNumber').type('12345678910');\ncy.get('#submit-creation-form').click();\ncy.url().should('include', '/order/personal/validation/');\ncy.get('.remember-me.paragraph.txt-line-h').click();\ncy.get('#submit-validation-form').click();",
+              "err": {
+                "message": "CypressError: `cy.task('writeAllureResults')` failed with the following error:\n\nThe task 'writeAllureResults' was not handled in the setupNodeEvents method. The following tasks are registered: reportAllureCypressSpecMessages, reportFinalAllureCypressSpecMessages\n\nFix this in your setupNodeEvents method here:\nD:\\Documents\\Logwire\\cypress projects\\glowria\\cypress.config.js\n\nhttps://on.cypress.io/api/task\n\nBecause this error occurred during a `after all` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.task('writeAllureResults')` failed with the following error:\n\nThe task 'writeAllureResults' was not handled in the setupNodeEvents method. The following tasks are registered: reportAllureCypressSpecMessages, reportFinalAllureCypressSpecMessages\n\nFix this in your setupNodeEvents method here:\nD:\\Documents\\Logwire\\cypress projects\\glowria\\cypress.config.js\n\nhttps://on.cypress.io/api/task\n\nBecause this error occurred during a `after all` hook we are skipping all of the remaining tests.\n    at <unknown> (http://localhost:59687/__cypress/runner/cypress_runner.js:138735:72)\n    at tryCatcher (http://localhost:59687/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (http://localhost:59687/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (http://localhost:59687/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (http://localhost:59687/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (http://localhost:59687/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (http://localhost:59687/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (http://localhost:59687/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (http://localhost:59687/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (http://localhost:59687/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at invokeResultsWriter (webpack://projet1/./node_modules/@shelex/cypress-allure-plugin/reporter/index.js:90:0)\n    at Context.eval (webpack://projet1/./node_modules/@shelex/cypress-allure-plugin/reporter/index.js:436:0)\n    at getRet (http://localhost:59687/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (http://localhost:59687/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (http://localhost:59687/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (http://localhost:59687/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (http://localhost:59687/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (http://localhost:59687/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "acf7795a-6f90-46d4-8d6a-c901522070f6",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "acf7795a-6f90-46d4-8d6a-c901522070f6"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 192,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "bc8a76b3-ce40-49b9-bac7-bb46cc4504fe",
+      "title": "",
+      "fullFile": "cypress\\e2e\\parcours.cy.js",
+      "file": "cypress\\e2e\\parcours.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fc9f7b4f-8909-41cd-ac33-59974e2c3dfa",
+          "title": "authentification",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "inscription",
+              "fullTitle": "authentification inscription",
+              "timedOut": null,
+              "duration": 25218,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept('POST', '**/signup').as('signup');\ncy.get('.modal__form').click();\ncy.get('#newEmail').type(`${email}@gmail.com`);\ncy.contains('.btn.btn-black.margin__large.btn-size-large', 'Inscription').click();\ncy.url().should('include', '/signup');\ncy.get('#customer_firstName').type('Amal');\ncy.get('#customer_lastName').type('Amal');\ncy.get('#customer_emailConfirm').type(`${email}@gmail.com`);\ncy.get('#customer_password').type('Password123!');\ncy.get('#customer_birthday').type('05051995', {\n  force: true\n});\ncy.get('#legalmentions').click();\ncy.get('#submitBtn').click();\ncy.get('#menu-button-open').click();\ncy.contains('.nav-link', 'acheter').click();\ncy.get('.btn.btn-red.btn-size-small.text__semi-bold.color__white.btn-annual.add-to-cart ').click();\ncy.get('#user_input_autocomplete_address').type('10 Rue de Rivoli, Paris');\ncy.contains('Paris').should('be.visible').click();\ncy.get('#subscription_deliveryContact_phoneNumber').type('12345678910');\ncy.get('#submit-creation-form').click();\ncy.url().should('include', '/order/personal/validation/');\ncy.get('.remember-me.paragraph.txt-line-h').click();\ncy.get('#submit-validation-form').click();",
+              "err": {},
+              "uuid": "9a8beb99-2c33-4257-bacf-dc43697ee724",
+              "parentUUID": "fc9f7b4f-8909-41cd-ac33-59974e2c3dfa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9a8beb99-2c33-4257-bacf-dc43697ee724"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 25218,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "0c8896f5-a517-4313-bd72-ae2e431b54eb",
+      "title": "",
+      "fullFile": "cypress\\e2e\\parcours.cy.js",
+      "file": "cypress\\e2e\\parcours.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e8758a5e-3855-46ef-b0d8-b2703368137d",
+          "title": "authentification",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "inscription",
+              "fullTitle": "authentification inscription",
+              "timedOut": null,
+              "duration": 25507,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept('POST', '**/signup').as('signup');\ncy.get('.modal__form').click();\ncy.get('#newEmail').type(`${email}@gmail.com`);\ncy.contains('.btn.btn-black.margin__large.btn-size-large', 'Inscription').click();\ncy.url().should('include', '/signup');\ncy.get('#customer_firstName').type('Amal');\ncy.get('#customer_lastName').type('Amal');\ncy.get('#customer_emailConfirm').type(`${email}@gmail.com`);\ncy.get('#customer_password').type('Password123!');\ncy.get('#customer_birthday').type('05051995', {\n  force: true\n});\ncy.get('#legalmentions').click();\ncy.get('#submitBtn').click();\ncy.get('#menu-button-open').click();\ncy.contains('.nav-link', 'acheter').click();\ncy.get('.btn.btn-red.btn-size-small.text__semi-bold.color__white.btn-annual.add-to-cart ').click();\ncy.get('#user_input_autocomplete_address').type('10 Rue de Rivoli, Paris');\ncy.contains('Paris').should('be.visible').click();\ncy.get('#subscription_deliveryContact_phoneNumber').type('12345678910');\ncy.get('#submit-creation-form').click();\ncy.url().should('include', '/order/personal/validation/');\ncy.get('.remember-me.paragraph.txt-line-h').click();\ncy.get('#submit-validation-form').click();",
+              "err": {},
+              "uuid": "f47cf069-a97d-4356-9482-d569fab9bf46",
+              "parentUUID": "e8758a5e-3855-46ef-b0d8-b2703368137d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f47cf069-a97d-4356-9482-d569fab9bf46"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 25507,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "d538c31b-633f-401c-8898-8df1426b6476",
+      "title": "",
+      "fullFile": "cypress\\e2e\\parcours.cy.js",
+      "file": "cypress\\e2e\\parcours.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3a5bede9-cce9-4856-b17e-f7a8aae7f293",
+          "title": "authentification",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "inscription",
+              "fullTitle": "authentification inscription",
+              "timedOut": null,
+              "duration": 31504,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept('POST', '**/signup').as('signup');\ncy.get('.modal__form').click();\ncy.get('#newEmail').type(`${email}@gmail.com`);\ncy.contains('.btn.btn-black.margin__large.btn-size-large', 'Inscription').click();\ncy.url().should('include', '/signup');\ncy.get('#customer_firstName').type('Amal');\ncy.get('#customer_lastName').type('Amal');\ncy.get('#customer_emailConfirm').type(`${email}@gmail.com`);\ncy.get('#customer_password').type('Password123!');\ncy.get('#customer_birthday').type('05051995', {\n  force: true\n});\ncy.get('#legalmentions').click();\ncy.get('#submitBtn').click();\ncy.get('#menu-button-open').click();\ncy.contains('.nav-link', 'acheter').click();\ncy.get('.btn.btn-red.btn-size-small.text__semi-bold.color__white.btn-annual.add-to-cart ').click();\ncy.get('#user_input_autocomplete_address').type('10 Rue de Rivoli, Paris');\ncy.contains('Paris').should('be.visible').click();\ncy.get('#subscription_deliveryContact_phoneNumber').type('12345678910');\ncy.get('#submit-creation-form').click();\ncy.url().should('include', '/order/personal/validation/');\ncy.get('.remember-me.paragraph.txt-line-h').click();\ncy.get('#submit-validation-form').click();",
+              "err": {},
+              "uuid": "fb2d94d9-408c-440b-94ea-e1a82d6704a8",
+              "parentUUID": "3a5bede9-cce9-4856-b17e-f7a8aae7f293",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fb2d94d9-408c-440b-94ea-e1a82d6704a8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 31504,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "fa8d4d9a-584b-481a-b704-8ea55923b9ef",
+      "title": "",
+      "fullFile": "cypress\\e2e\\parcours.cy.js",
+      "file": "cypress\\e2e\\parcours.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4775d91c-99fb-4c6a-a5f4-ec3abed065b5",
+          "title": "authentification",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "inscription",
+              "fullTitle": "authentification inscription",
+              "timedOut": null,
+              "duration": 24089,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept('POST', '**/signup').as('signup');\ncy.get('.modal__form').click();\ncy.get('#newEmail').type(`${email}@gmail.com`);\ncy.contains('.btn.btn-black.margin__large.btn-size-large', 'Inscription').click();\ncy.url().should('include', '/signup');\ncy.get('#customer_firstName').type('Amal');\ncy.get('#customer_lastName').type('Amal');\ncy.get('#customer_emailConfirm').type(`${email}@gmail.com`);\ncy.get('#customer_password').type('Password123!');\ncy.get('#customer_birthday').type('05051995', {\n  force: true\n});\ncy.get('#legalmentions').click();\ncy.get('#submitBtn').click();\ncy.get('#menu-button-open').click();\ncy.contains('.nav-link', 'acheter').click();\ncy.get('.btn.btn-red.btn-size-small.text__semi-bold.color__white.btn-annual.add-to-cart ').click();\ncy.get('#user_input_autocomplete_address').type('10 Rue de Rivoli, Paris');\ncy.contains('Paris').should('be.visible').click();\ncy.get('#subscription_deliveryContact_phoneNumber').type('12345678910');\ncy.get('#submit-creation-form').click();\ncy.url().should('include', '/order/personal/validation/');\ncy.get('.remember-me.paragraph.txt-line-h').click();\ncy.get('#submit-validation-form').click();",
+              "err": {},
+              "uuid": "1b55224c-8f10-4ff5-bb5d-816f83cdd9cd",
+              "parentUUID": "4775d91c-99fb-4c6a-a5f4-ec3abed065b5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1b55224c-8f10-4ff5-bb5d-816f83cdd9cd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 24089,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "60dcfd64-caee-4b69-99ef-49ed7c5ec68e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\parcours.cy.js",
+      "file": "cypress\\e2e\\parcours.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6c7532ef-9b84-447c-a075-5579e0de4ada",
+          "title": "authentification",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "inscription",
+              "fullTitle": "authentification inscription",
+              "timedOut": null,
+              "duration": 176,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept('POST', '**/signup').as('signup');\ncy.get('.modal__form').click();\ncy.get('#newEmail').type(`${email}@gmail.com`);\ncy.contains('.btn.btn-black.margin__large.btn-size-large', 'Inscription').click();\ncy.url().should('include', '/signup');\ncy.get('#customer_firstName').type('Amal');\ncy.get('#customer_lastName').type('Amal');\ncy.get('#customer_emailConfirm').type(`${email}@gmail.com`);\ncy.get('#customer_password').type('Password123!');\ncy.get('#customer_birthday').type('05051995', {\n  force: true\n});\ncy.get('#legalmentions').click();\ncy.get('#submitBtn').click();\ncy.get('#menu-button-open').click();\ncy.contains('.nav-link', 'acheter').click();\ncy.get('.btn.btn-red.btn-size-small.text__semi-bold.color__white.btn-annual.add-to-cart ').click();\ncy.get('#user_input_autocomplete_address').type('10 Rue de Rivoli, Paris');\ncy.contains('Paris').should('be.visible').click();\ncy.get('#subscription_deliveryContact_phoneNumber').type('12345678910');\ncy.get('#submit-creation-form').click();\ncy.url().should('include', '/order/personal/validation/');\ncy.get('.remember-me.paragraph.txt-line-h').click();\ncy.get('#submit-validation-form').click();",
+              "err": {
+                "message": "CypressError: `cy.task('writeAllureResults')` failed with the following error:\n\nThe task 'writeAllureResults' was not handled in the setupNodeEvents method. The following tasks are registered: reportAllureCypressSpecMessages, reportFinalAllureCypressSpecMessages\n\nFix this in your setupNodeEvents method here:\nD:\\Documents\\Logwire\\cypress projects\\glowria\\cypress.config.js\n\nhttps://on.cypress.io/api/task\n\nBecause this error occurred during a `after all` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.task('writeAllureResults')` failed with the following error:\n\nThe task 'writeAllureResults' was not handled in the setupNodeEvents method. The following tasks are registered: reportAllureCypressSpecMessages, reportFinalAllureCypressSpecMessages\n\nFix this in your setupNodeEvents method here:\nD:\\Documents\\Logwire\\cypress projects\\glowria\\cypress.config.js\n\nhttps://on.cypress.io/api/task\n\nBecause this error occurred during a `after all` hook we are skipping all of the remaining tests.\n    at <unknown> (http://localhost:59640/__cypress/runner/cypress_runner.js:138735:72)\n    at tryCatcher (http://localhost:59640/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (http://localhost:59640/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (http://localhost:59640/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (http://localhost:59640/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (http://localhost:59640/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (http://localhost:59640/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (http://localhost:59640/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (http://localhost:59640/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (http://localhost:59640/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at invokeResultsWriter (webpack://projet1/./node_modules/@shelex/cypress-allure-plugin/reporter/index.js:90:0)\n    at Context.eval (webpack://projet1/./node_modules/@shelex/cypress-allure-plugin/reporter/index.js:436:0)\n    at getRet (http://localhost:59640/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (http://localhost:59640/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (http://localhost:59640/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (http://localhost:59640/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (http://localhost:59640/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (http://localhost:59640/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "ffbc3c30-d880-441e-ac7c-f03063dbc895",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ffbc3c30-d880-441e-ac7c-f03063dbc895"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 176,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

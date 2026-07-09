@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-07-09T21:10:23.722Z",
+    "end": "2026-07-09T21:10:24.418Z",
+    "duration": 696,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "873e6d3f-4c3f-4be0-a72c-0d1797476623",
+      "title": "",
+      "fullFile": "cypress\\e2e\\parcours.cy.js",
+      "file": "cypress\\e2e\\parcours.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "27f47d6d-d688-4a28-8f3b-6b499ed66f55",
+          "title": "authentification",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "inscription",
+              "fullTitle": "authentification inscription",
+              "timedOut": null,
+              "duration": 192,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept('POST', '**/signup').as('signup');\ncy.get('.modal__form').click();\ncy.get('#newEmail').type(`${email}@gmail.com`);\ncy.contains('.btn.btn-black.margin__large.btn-size-large', 'Inscription').click();\ncy.url().should('include', '/signup');\ncy.get('#customer_firstName').type('Amal');\ncy.get('#customer_lastName').type('Amal');\ncy.get('#customer_emailConfirm').type(`${email}@gmail.com`);\ncy.get('#customer_password').type('Password123!');\ncy.get('#customer_birthday').type('05051995', {\n  force: true\n});\ncy.get('#legalmentions').click();\ncy.get('#submitBtn').click();\ncy.get('#menu-button-open').click();\ncy.contains('.nav-link', 'acheter').click();\ncy.get('.btn.btn-red.btn-size-small.text__semi-bold.color__white.btn-annual.add-to-cart ').click();\ncy.get('#user_input_autocomplete_address').type('10 Rue de Rivoli, Paris');\ncy.contains('Paris').should('be.visible').click();\ncy.get('#subscription_deliveryContact_phoneNumber').type('12345678910');\ncy.get('#submit-creation-form').click();\ncy.url().should('include', '/order/personal/validation/');\ncy.get('.remember-me.paragraph.txt-line-h').click();\ncy.get('#submit-validation-form').click();",
+              "err": {
+                "message": "CypressError: `cy.task('writeAllureResults')` failed with the following error:\n\nThe task 'writeAllureResults' was not handled in the setupNodeEvents method. The following tasks are registered: reportAllureCypressSpecMessages, reportFinalAllureCypressSpecMessages\n\nFix this in your setupNodeEvents method here:\nD:\\Documents\\Logwire\\cypress projects\\glowria\\cypress.config.js\n\nhttps://on.cypress.io/api/task\n\nBecause this error occurred during a `after all` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.task('writeAllureResults')` failed with the following error:\n\nThe task 'writeAllureResults' was not handled in the setupNodeEvents method. The following tasks are registered: reportAllureCypressSpecMessages, reportFinalAllureCypressSpecMessages\n\nFix this in your setupNodeEvents method here:\nD:\\Documents\\Logwire\\cypress projects\\glowria\\cypress.config.js\n\nhttps://on.cypress.io/api/task\n\nBecause this error occurred during a `after all` hook we are skipping all of the remaining tests.\n    at <unknown> (http://localhost:59687/__cypress/runner/cypress_runner.js:138735:72)\n    at tryCatcher (http://localhost:59687/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (http://localhost:59687/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (http://localhost:59687/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (http://localhost:59687/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (http://localhost:59687/__cypress/runner/cypress_runner.js:1667:18)\n    at _drainQueueStep (http://localhost:59687/__cypress/runner/cypress_runner.js:2377:12)\n    at _drainQueue (http://localhost:59687/__cypress/runner/cypress_runner.js:2370:9)\n    at Async._drainQueues (http://localhost:59687/__cypress/runner/cypress_runner.js:2386:5)\n    at Async.drainQueues (http://localhost:59687/__cypress/runner/cypress_runner.js:2256:14)\nFrom Your Spec Code:\n    at invokeResultsWriter (webpack://projet1/./node_modules/@shelex/cypress-allure-plugin/reporter/index.js:90:0)\n    at Context.eval (webpack://projet1/./node_modules/@shelex/cypress-allure-plugin/reporter/index.js:436:0)\n    at getRet (http://localhost:59687/__cypress/runner/cypress_runner.js:121066:20)\n    at tryCatcher (http://localhost:59687/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (http://localhost:59687/__cypress/runner/cypress_runner.js:4285:29)\n    at Context.thenFn (http://localhost:59687/__cypress/runner/cypress_runner.js:121077:66)\n    at Context.then (http://localhost:59687/__cypress/runner/cypress_runner.js:121328:21)\n    at wrapped (http://localhost:59687/__cypress/runner/cypress_runner.js:141671:19)",
+                "diff": null
+              },
+              "uuid": "acf7795a-6f90-46d4-8d6a-c901522070f6",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "acf7795a-6f90-46d4-8d6a-c901522070f6"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 192,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
