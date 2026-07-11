@@ -39,12 +39,10 @@ pipeline {
             steps {
                 sh 'npm run allure:generate'
 
-                archiveArtifacts artifacts: 'allure-report/**, allure-results/**, cypress/reports/**, cypress/screenshots/**, cypress/videos/**',
-                         allowEmptyArchive: true
+                archiveArtifacts artifacts: 'allure-report/**',
+                                    allowEmptyArchive: true
                 }
-            }
         }
-
     post {
         always {
             echo 'Pipeline terminé.'
