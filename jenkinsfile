@@ -43,6 +43,7 @@ pipeline {
                                     allowEmptyArchive: true
                 }
         }
+    }
     post {
         always {
             echo 'Pipeline terminé.'
