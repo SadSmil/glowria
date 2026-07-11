@@ -27,6 +27,14 @@ pipeline {
             }
         }
 
+        stage('Check Allure') {
+            steps {
+                sh 'which allure || true'
+                sh 'allure --version || true'
+                sh 'allure generate --help || true'
+            }
+        }
+
         stage('Generate Allure report') {
             steps {
                 sh 'npm run allure:generate'
